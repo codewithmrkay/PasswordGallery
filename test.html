@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up or Log In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="signup-section" class="container">
+        <h2>Sign Up</h2>
+        <div class="container">
+            <input class="input" autocomplete="off" required type="number" id="luckyNumber" min="1" max="10">
+            <label class="label" for="luckyNumber">Lucky Number (1 to 10):</label>
+            <br>
+        </div>
+        <div class="container">
+            <input class="input" autocomplete="off" required type="text" id="favColor">
+            <label class="label" for="favColor">Favorite Color:</label>
+            <br>
+        </div>
+        <div class="container">
+            <input class="input" autocomplete="off" required type="text" id="favLetter" maxlength="1">
+            <label class="label" for="favLetter">Favorite Letter (A to Z):</label>
+            <br>
+        </div>
+
+        <button id="signupBtn">Sign Up</button>
+    </div>
+
+    <div id="login-section" style="display: none;" class="container">
+        <h2>Log In</h2>
+        <div class="container">
+            <input class="input" autocomplete="off" required type="number" id="loginNumber">
+            <label class="label" for="loginNumber">Lucky Number:</label>
+            <br>
+        </div>
+        <div class="container">
+            <input class="input" autocomplete="off" required type="text" id="loginColor">
+            <label class="label" for="loginColor">Favorite Color:</label>
+            <br>
+        </div>
+        <div class="container">
+            <input class="input" autocomplete="off" required type="text" id="loginLetter" maxlength="1">
+            <label class="label" for="loginLetter">Favorite Letter:</label>
+            <br>
+        </div>
+        <button id="loginBtn">Log In</button>
+    </div>
+
+    <div id="welcome-section" style="display: none;">
+        <!-- Form to add new topic and password -->
+        <div id="addFormContainer" class="container">
+            <a href="saved.html">
+                <h1>saved ka seen</h1>
+            </a>
+            <div class="container">
+                <input autocomplete="off" class="input" type="text" id="newTopic">
+                <label class="label" for="newTopic">New Topic</label>
+                <br>
+            </div>
+            <div class="container">
+                <input autocomplete="off" class="input" type="text" id="newPassword">
+                <label class="label" for="newPassword">Password</label>
+            </div>
+            <br>
+            <button id="submitBtn">Add</button>
+        </div>
+
+        <!-- Section to display added topics and passwords -->
+        <div id="passwordList"></div>
+        <button id="logoutBtn">Log Out</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
