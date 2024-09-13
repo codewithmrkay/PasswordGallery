@@ -12,36 +12,134 @@
     margin: 0;
     padding: 20px;
     padding-top: 30px;
-    background-color: #212121;
+    background-color: #252525;
     max-width: 350px;
   }
-  
+  /* Social icons section */
+.social-icons {
+  max-width: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.icon {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+/* todo--------------------------------------- Normal Button */
+button {
+  font-size: 1.2rem;
+  width: fit-content;
+  padding: 10px; 
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+/* todo----------------------------------------------- glow button */
+.card {
+  margin-top: 20px;
+  position: relative;
+  width:150px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+  top: 55%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.7em;
+  border: none;
+}
+
+.card:hover {
+  scale: 1.05;
+  rotate: 3deg;
+}
+
+.card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 0.7em;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+.shadow {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+  z-index: -1;
+  filter: blur(10px);
+  animation: rotate 3s linear infinite;
+}
+
+.txt {
+  position: absolute;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.card:hover .shadow {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    /* rotate: 0deg; */
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+  }
+
+  50% {
+    /* rotate: 0dg; */
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+  }
+
+  100% {
+    /* rotate: 360deg; */
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+  }
+}
+/* todo-------------------------------------sign up section */
   #signup-section h2,#login-section h2 {
     color:white;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   
   input {
     text-transform: uppercase;
   }
   
-  button {
-    font-size: 1.2rem;
-    width: fit-content;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
   #signup-section, #login-section, #welcome-section {
     height: 100%;
+  }
+  /* todo------------------------------------------all main btn [log ,sign] */
+  #logoutBtn,#loninBtn,#signupBtn{
+    margin:20px 0px;
   }
   /* From Uiverse.io by AmIt-DasIT */ 
   .container {
@@ -101,17 +199,20 @@
   /* todo------------------------------------------ After login all task */
   #addFormContainer {
     margin-bottom: 20px;
-    /* height: 100%; */
   }
-  
+  input::placeholder{
+    color: white;
+  }
   #newTopic, #newPassword {
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
   }
-  
-  button {
+  #newPassword{
+text-transform: none;
+  }
+  /* button {
     padding: 10px 15px;
     border: none;
     background-color: #28a745;
@@ -122,7 +223,7 @@
   
   button:hover {
     background-color: #218838;
-  }
+  } */
   
   #passwordList {
     margin-top: 20px;
@@ -132,7 +233,7 @@
   .password-item {
     padding: 10px;
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;

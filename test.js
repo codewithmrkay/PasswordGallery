@@ -52,6 +52,7 @@
     logoutBtn.addEventListener("click", function () {
         localStorage.removeItem("userPassword"); // Remove saved password
         showSignup(); // Go back to sign-up screen when logged out
+        document.location.reload()
     });
     
     // Show Signup Screen
@@ -100,7 +101,7 @@
             
             // Add topic and password display
             const content = document.createElement('div');
-            content.innerHTML = `<strong>Topic:</strong> ${topic} | <strong>Password:</strong> <span class="password">${password}</span>`;
+            content.innerHTML = `<strong>Topic:</strong> ${topic}  <strong>Password:</strong> <span class="password">${password}</span>`;
             itemDiv.appendChild(content);
             
             // Add action buttons (Copy, Edit, Remove)

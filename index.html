@@ -11,6 +11,20 @@
 <body>
     <div id="signup-section" class="container">
         <h2>Sign Up</h2>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@code_gully" target="_blank">
+                <img src="hticon.webp" alt="YouTube" class="icon">
+            </a>
+            <a href="https://discord.gg/xbeHBJRn6n" target="_blank">
+                <img src="disicon.webp" alt="Discord" class="icon">
+            </a>
+            <a href="https://www.instagram.com/mr.k_official_01?igsh=ZWQ2Y3N6NWU2NHB5" target="_blank">
+                <img src="instaicon.webp" alt="Instagram" class="icon">
+            </a>
+            <a href="https://github.com/codewithmrkay" target="_blank">
+                <img src="giticon.webp" alt="Instagram" class="icon">
+            </a>
+        </div>
         <div class="container">
             <input class="input" autocomplete="off" required type="number" id="luckyNumber" min="1" max="10">
             <label class="label" for="luckyNumber">Lucky Number (1 to 10):</label>
@@ -24,14 +38,31 @@
         <div class="container">
             <input class="input" autocomplete="off" required type="text" id="favLetter" maxlength="1">
             <label class="label" for="favLetter">Favorite Letter (A to Z):</label>
-            <br>
         </div>
-
-        <button id="signupBtn">Sign Up</button>
+        <div class="glow" id="signupBtn">
+            <div class="card">
+                <div class="txt">Sign Up</div>
+                <div class="shadow"></div>
+            </div>
+        </div>
     </div>
 
     <div id="login-section" style="display: none;" class="container">
         <h2>Log In</h2>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@code_gully" target="_blank">
+                <img src="hticon.webp" alt="YouTube" class="icon">
+            </a>
+            <a href="https://discord.gg/xbeHBJRn6n" target="_blank">
+                <img src="disicon.webp" alt="Discord" class="icon">
+            </a>
+            <a href="https://www.instagram.com/mr.k_official_01?igsh=ZWQ2Y3N6NWU2NHB5" target="_blank">
+                <img src="instaicon.webp" alt="Instagram" class="icon">
+            </a>
+            <a href="https://github.com/codewithmrkay" target="_blank">
+                <img src="giticon.webp" alt="Instagram" class="icon">
+            </a>
+        </div>
         <div class="container">
             <input class="input" autocomplete="off" required type="number" id="loginNumber">
             <label class="label" for="loginNumber">Lucky Number:</label>
@@ -47,31 +78,53 @@
             <label class="label" for="loginLetter">Favorite Letter:</label>
             <br>
         </div>
-        <button id="loginBtn">Log In</button>
+        <div id="loginBtn">
+            <div class="card">
+                <div class="txt">Log In</div>
+                <div class="shadow"></div>
+            </div>
+        </div>
     </div>
 
     <div id="welcome-section" style="display: none;">
         <!-- Form to add new topic and password -->
-        <div id="addFormContainer" class="container">
-            <a href="saved.html">
-                <h1>saved ka seen</h1>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@code_gully" target="_blank">
+                <img src="hticon.webp" alt="YouTube" class="icon">
             </a>
+            <a href="https://discord.gg/xbeHBJRn6n" target="_blank">
+                <img src="disicon.webp" alt="Discord" class="icon">
+            </a>
+            <a href="https://www.instagram.com/mr.k_official_01?igsh=ZWQ2Y3N6NWU2NHB5" target="_blank">
+                <img src="instaicon.webp" alt="Instagram" class="icon">
+            </a>
+            <a href="https://github.com/codewithmrkay" target="_blank">
+                <img src="giticon.webp" alt="Instagram" class="icon">
+            </a>
+        </div>
+        <div id="addFormContainer" class="container">
             <div class="container">
-                <input autocomplete="off" class="input" type="text" id="newTopic">
-                <label class="label" for="newTopic">New Topic</label>
+                <input autocomplete="off" class="input" type="text" id="newTopic" placeholder="New Topic">
                 <br>
             </div>
             <div class="container">
-                <input autocomplete="off" class="input" type="text" id="newPassword">
-                <label class="label" for="newPassword">Password</label>
+                <input autocomplete="off" class="input" type="text" id="newPassword" placeholder="Password">
             </div>
-            <br>
             <button id="submitBtn">Add</button>
         </div>
 
         <!-- Section to display added topics and passwords -->
         <div id="passwordList"></div>
-        <button id="logoutBtn">Log Out</button>
+        <div class="container">
+
+
+            <div id="logoutBtn">
+                <div class="card">
+                    <div class="txt">Log Out</div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="test.js"></script>
